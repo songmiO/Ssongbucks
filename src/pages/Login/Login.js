@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './Login.scss';
+import LoginForm from './LoginForm';
 
 class Login extends Component {
   render() {
     return (
       <div className="login">
         <div className="title">webucks</div>
+        <LoginForm />
         <footer className="forgotPW">
           <a
             className="forgetPwLink"
