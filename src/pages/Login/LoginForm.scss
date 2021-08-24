@@ -1,28 +1,27 @@
+@import '../../styles/reset.scss';
+
 .loginForm {
   position: relative;
   margin: auto 0;
   border: none;
   text-align: center;
+
   input {
-    display: inline-block;
+    display: flex;
     width: 400px;
-    height: 50px;
     padding: 15px;
-    margin-bottom: 25px;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-    box-sizing: border-box;
     font-size: 15px;
-    font-family: 'Nanum Gothic', sans-serif;
   }
+
   .loginBtn {
-    position: relative;
+    display: flex;
     width: 400px;
-    height: 50px;
-    margin: auto 0px;
+    padding: 13px;
     background-color: #006633;
     color: #ffffff;
     font-size: 15px;
     font-family: 'Nanum Gothic', sans-serif;
+    justify-content: center;
+    align-items: center;
   }
 }
