@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './LoginForm.scss';
+
 class LoginForm extends Component {
   render() {
     return (
-      <div>
-        <form className="loginForm">
+      <div className="loginForm">
+        <form className="loginInput">
           <input
             className="loginId"
             type="text"
