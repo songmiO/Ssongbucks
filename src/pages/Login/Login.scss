@@ -1,6 +1,9 @@
+@import '../../styles/reset.scss';
+
 .login {
   display: flex;
-  margin-top: 50px;
+  width: 400px;
+  margin: 250px auto;
   justify-content: center;
   align-items: center;
   flex-direction: column;
