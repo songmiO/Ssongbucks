@@ -1,31 +1,21 @@
-@import '../../styles/reset.scss';
-
 .loginForm {
+  display: flex;
   position: relative;
   margin: auto 0;
   border: none;
   text-align: center;
 
   input {
-    display: flex;
-    width: 400px;
+    width: 100%;
     padding: 15px;
     font-size: 15px;
   }
 
   .loginBtn {
-    display: flex;
     width: 400px;
     padding: 13px;
-    background-color: #2db16f;
+    background-color: #006633;
     color: #ffffff;
     font-size: 15px;
-    font-family: 'Nanum Gothic', sans-serif;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .loginBtnActive {
-    background-color: #006633;
   }
 }

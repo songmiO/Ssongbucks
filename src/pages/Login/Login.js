@@ -8,9 +8,11 @@ class Login extends Component {
   render() {
     return (
       <div className="login">
-        <LoginTitle />
-        <LoginForm />
-        <LoginForgotPw />
+        <div className="loginContainer">
+          <LoginTitle />
+          <LoginForm />
+          <LoginForgotPw />
+        </div>
       </div>
     );
   }
