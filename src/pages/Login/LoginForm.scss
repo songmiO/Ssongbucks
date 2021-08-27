@@ -17,11 +17,15 @@
     display: flex;
     width: 400px;
     padding: 13px;
-    background-color: #006633;
+    background-color: #2db16f;
     color: #ffffff;
     font-size: 15px;
     font-family: 'Nanum Gothic', sans-serif;
     justify-content: center;
     align-items: center;
+  }
+
+  .loginBtnActive {
+    background-color: #006633;
   }
 }

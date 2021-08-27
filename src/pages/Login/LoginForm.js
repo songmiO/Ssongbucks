@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import './LoginForm.scss';
 
 class LoginForm extends Component {
-  render() {
+  constructor() {
     super();
     this.state = {
-      loginIdValue: "",
-      loginPwValue: ""
+      loginIdValue: '',
+      loginPwValue: '',
     };
   }
 
@@ -22,6 +22,20 @@ class LoginForm extends Component {
     });
   };
 
+  login = () => {
+    fetch('/users/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: this.state.loginIdValue,
+        password: this.state.loginPwValue,
+      }),
+    }).then(response => response.json());
+  };
+
+  render() {
     return (
       <div className="loginForm">
         <form className="loginInput">
@@ -29,13 +43,25 @@ class LoginForm extends Component {
             className="loginId"
             type="text"
             placeholder="아이디를 입력해주세요."
+            onChange={this.handleIdInput}
           />
           <input
             className="loginPw"
             type="password"
             placeholder="비밀번호를 입력해주세요."
+            onChange={this.handlePwInput}
           />
-          <button className="loginBtn" type="button">
+          <button
+            className={
+              this.state.loginIdValue.includes('@') &&
+              this.state.loginPwValue.length > 4
+                ? 'loginBtn loginBtnActive'
+                : 'loginBtn'
+            }
+            className="loginBtn"
+            type="button"
+            onClick={this.login}
+          >
             로그인
           </button>
         </form>
