@@ -3,6 +3,25 @@ import './LoginForm.scss';
 
 class LoginForm extends Component {
   render() {
+    super();
+    this.state = {
+      loginIdValue: "",
+      loginPwValue: ""
+    };
+  }
+
+  handleIdInput = event => {
+    this.setState({
+      loginIdValue: event.target.value,
+    });
+  };
+
+  handlePwInput = event => {
+    this.setState({
+      loginPwValue: event.target.value,
+    });
+  };
+
     return (
       <div className="loginForm">
         <form className="loginInput">
