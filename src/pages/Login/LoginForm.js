@@ -1,38 +1,33 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import './LoginForm.scss';
 
 class LoginForm extends Component {
   constructor() {
     super();
     this.state = {
-      loginIdValue: '',
-      loginPwValue: '',
+      id: '',
+      pw: '',
+      isBtnActive: false,
     };
   }
 
-  handleIdInput = event => {
+  handleInput = event => {
     this.setState({
-      loginIdValue: event.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
-  handlePwInput = event => {
-    this.setState({
-      loginPwValue: event.target.value,
-    });
+  loginBtnChange = () => {
+    if (this.state.id.includes('@') && this.state.pw.length > 4) {
+      this.setState({ isBtnActive: true });
+    } else {
+      this.setState({ isBtnActive: false });
+    }
   };
 
-  login = () => {
-    fetch('/users/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        email: this.state.loginIdValue,
-        password: this.state.loginPwValue,
-      }),
-    }).then(response => response.json());
+  goMain = () => {
+    this.props.history.push('/main');
   };
 
   render() {
@@ -42,25 +37,24 @@ class LoginForm extends Component {
           <input
             className="loginId"
             type="text"
-            placeholder="아이디를 입력해주세요."
-            onChange={this.handleIdInput}
+            placeholder="아이디 또는 이메일을 입력해주세요."
+            onChange={this.handleInput}
+            onKeyUp={this.loginBtnChange}
           />
           <input
             className="loginPw"
             type="password"
             placeholder="비밀번호를 입력해주세요."
-            onChange={this.handlePwInput}
+            onChange={this.handleInput}
+            onKeyUp={this.loginBtnChange}
           />
           <button
             className={
-              this.state.loginIdValue.includes('@') &&
-              this.state.loginPwValue.length > 4
-                ? 'loginBtn loginBtnActive'
-                : 'loginBtn'
+              this.state.isBtnActive ? 'loginBtnActive' : 'loginBtnDisactive'
             }
             className="loginBtn"
             type="button"
-            onClick={this.login}
+            onClick={this.goMain}
           >
             로그인
           </button>
@@ -70,4 +64,4 @@ class LoginForm extends Component {
   }
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);
