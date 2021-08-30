@@ -20,13 +20,6 @@ class LoginForm extends Component {
     });
   };
 
-  loginBtnChange = () => {
-    const isValid = this.state.id.includes('@') && this.state.pw.length > 4;
-    this.setState({
-      isBtnActive: isValid ? true : false,
-    });
-  };
-
   goMain = () => {
     this.props.history.push('/main');
   };
@@ -38,22 +31,23 @@ class LoginForm extends Component {
           <input
             className="loginId"
             type="text"
+            name="id"
             placeholder="아이디 또는 이메일을 입력해주세요."
             onChange={this.handleInput}
-            onKeyUp={this.loginBtnChange}
           />
           <input
             className="loginPw"
             type="password"
+            name="pw"
             placeholder="비밀번호를 입력해주세요."
             onChange={this.handleInput}
-            onKeyUp={this.loginBtnChange}
           />
           <button
             className={
-              this.state.isBtnActive ? 'loginBtnActive' : 'loginBtnDisactive'
+              this.state.id.includes('@') && this.state.pw.length > 4
+                ? 'loginBtn loginBtnActive'
+                : 'loginBtn'
             }
-            className="loginBtn"
             type="button"
             onClick={this.goMain}
           >
