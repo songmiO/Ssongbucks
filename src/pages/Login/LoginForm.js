@@ -13,17 +13,16 @@ class LoginForm extends Component {
   }
 
   handleInput = event => {
+    const { name, value } = event.target;
     this.setState({
-      [event.target.name]: event.target.value,
+      [name]: value,
     });
   };
 
   loginBtnChange = () => {
-    if (this.state.id.includes('@') && this.state.pw.length > 4) {
-      this.setState({ isBtnActive: true });
-    } else {
-      this.setState({ isBtnActive: false });
-    }
+    this.state.id.includes('@') && this.state.pw.length > 4
+      ? this.setState({ isBtnActive: true })
+      : this.setState({ isBtnActive: false });
   };
 
   goMain = () => {
