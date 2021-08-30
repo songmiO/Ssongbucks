@@ -14,15 +14,17 @@ class LoginForm extends Component {
 
   handleInput = event => {
     const { name, value } = event.target;
+
     this.setState({
       [name]: value,
     });
   };
 
   loginBtnChange = () => {
-    this.state.id.includes('@') && this.state.pw.length > 4
-      ? this.setState({ isBtnActive: true })
-      : this.setState({ isBtnActive: false });
+    const isValid = this.state.id.includes('@') && this.state.pw.length > 4;
+    this.setState({
+      isBtnActive: isValid ? true : false,
+    });
   };
 
   goMain = () => {
