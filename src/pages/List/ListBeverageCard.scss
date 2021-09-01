@@ -1,14 +1,18 @@
 .listBeverageCard {
-  margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 20px;
 
-  .beverageProductImage img {
+  .beverageProduct {
     width: 250px;
     height: 250px;
-    float: left;
-    margin-left: 15px;
+    margin: 0 10px;
   }
 
   .beverageProductName {
-    color: rgb(0, 0, 0);
+    display: block;
+    font-size: 15px;
+    padding: 10px 30px;
+
+    text-align: center;
   }
 }

@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import './Nav.scss';
 
 class Nav extends Component {
   render() {
     return (
-      <div>
-        <h1>Nav</h1>
-      </div>
+      <header className="nav">
+        <h1>
+          <a href="#">
+            <img alt="logo" />
+          </a>
+        </h1>
+      </header>
     );
   }
 }
