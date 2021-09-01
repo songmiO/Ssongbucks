@@ -1,0 +1,25 @@
+.loginForm {
+  display: flex;
+  position: relative;
+  margin: auto 0;
+  border: none;
+  text-align: center;
+
+  input {
+    width: 100%;
+    padding: 15px;
+    font-size: 15px;
+  }
+
+  .loginBtn {
+    width: 400px;
+    padding: 13px;
+    background-color: #6ecf9f;
+    color: #ffffff;
+    font-size: 15px;
+  }
+
+  .loginBtnActive {
+    background-color: #006633;
+  }
+}
