@@ -25,6 +25,8 @@ class LoginForm extends Component {
   };
 
   render() {
+    const isLoginBtnActive =
+      this.state.id.includes('@') && this.state.pw.length > 4;
     return (
       <div className="loginForm">
         <form className="loginInput">
@@ -44,9 +46,7 @@ class LoginForm extends Component {
           />
           <button
             className={
-              this.state.id.includes('@') && this.state.pw.length > 4
-                ? 'loginBtn loginBtnActive'
-                : 'loginBtn'
+              isLoginBtnActive ? 'loginBtn loginBtnActive' : 'loginBtn'
             }
             type="button"
             onClick={this.goMain}
