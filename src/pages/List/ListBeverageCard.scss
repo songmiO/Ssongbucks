@@ -1,0 +1,16 @@
+.listBeverageCard {
+  margin-bottom: 20px;
+  text-align: center;
+
+  .beverageProduct {
+    width: 250px;
+    padding: 0 auto;
+    margin: 0 10px;
+  }
+
+  .beverageProductName {
+    font-size: 15px;
+    padding: 10px 30px;
+    text-align: center;
+  }
+}

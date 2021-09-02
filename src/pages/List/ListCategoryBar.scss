@@ -1,0 +1,23 @@
+.listCategoryBar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  background-color: #f4f4f2;
+
+  .listCategoryTitle {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .listCategoryIcon {
+    width: 45px;
+    margin-left: 15px;
+  }
+
+  .listCategoryExplain {
+    margin-left: 3px;
+    font-size: 15px;
+  }
+}
