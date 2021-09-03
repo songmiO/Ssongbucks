@@ -26,7 +26,7 @@ class LikeBtn extends Component {
       >
         <FontAwesomeIcon
           className="likeHeartIcon"
-          icon={this.state.isClicke ? regularHeart : solidHeart}
+          icon={this.state.isClicked ? solidHeart : regularHeart}
         />
       </div>
     );
