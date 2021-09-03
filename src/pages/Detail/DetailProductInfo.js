@@ -11,7 +11,7 @@ class DetailProductInfo extends Component {
           <div className="productLikeBtn">
             <LikeBtn />
           </div>
-          <h2>Cool Lime Starbucks Fizzio™</h2>
+          <h2>Cool Lime Ssongbucks Fizzio™</h2>
           <div className="productExplain">
             <p>
               그린 빈 추출액이 들어간 라임 베이스에 건조된 라임 슬라이스를 넣고

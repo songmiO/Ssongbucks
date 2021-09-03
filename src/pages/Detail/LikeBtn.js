@@ -12,7 +12,7 @@ class LikeBtn extends Component {
     };
   }
 
-  Click = () => {
+  click = () => {
     this.setState({
       isClicked: !this.state.isClicked,
     });
