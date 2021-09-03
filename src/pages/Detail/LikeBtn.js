@@ -22,7 +22,7 @@ class LikeBtn extends Component {
     return (
       <div
         className={this.state.isClicked ? 'likeBtnActive' : ''}
-        onClick={this.Click}
+        onClick={this.click}
       >
         <FontAwesomeIcon
           className="likeHeartIcon"
