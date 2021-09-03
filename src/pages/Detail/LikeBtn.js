@@ -1,0 +1,36 @@
+import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as solidHeart } from '@fortawesome/free-solid-svg-icons';
+import './LikeBtn.scss';
+
+class LikeBtn extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isClicked: false,
+    };
+  }
+
+  Click = () => {
+    this.setState({
+      isClicked: !this.state.isClicked,
+    });
+  };
+
+  render() {
+    return (
+      <div
+        className={this.state.isClicked ? 'likeBtnActive' : ''}
+        onClick={this.Click}
+      >
+        <FontAwesomeIcon
+          className="likeHeartIcon"
+          icon={this.state.isClicke ? regularHeart : solidHeart}
+        />
+      </div>
+    );
+  }
+}
+
+export default LikeBtn;

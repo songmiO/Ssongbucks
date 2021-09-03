@@ -30,6 +30,7 @@ cite,
 code,
 del,
 dfn,
+div,
 em,
 img,
 ins,
@@ -141,4 +142,8 @@ input {
 
 div {
   font-family: 'Nanum Gothic', sans-serif;
+}
+
+ul {
+  padding: 0;
 }
