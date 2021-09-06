@@ -39,7 +39,7 @@ class DetailReview extends Component {
         <div className="reviewList">
           <ul className="list">
             {this.state.reviewList.map(content => (
-              <li>(쿨라임 피지오 너무 맛있어요!)</li>
+              <li>{content}쿨라임 피지오 너무 맛있어요!</li>
             ))}
           </ul>
         </div>
