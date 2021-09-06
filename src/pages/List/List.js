@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Nav from '../../components/Nav/Nav';
 import ListCategoryBar from './ListCategoryBar';
 import ListBeverageCard from './ListBeverageCard';
 import './List.scss';
@@ -24,16 +25,19 @@ class List extends Component {
   render() {
     return (
       <div className="list">
-        <div className="listContanier">
-          <ListCategoryBar />
-          <div className="listProductCard">
-            {this.state.beverageData.map(product => (
-              <ListBeverageCard
-                key={product.id}
-                img={product.img}
-                name={product.name}
-              />
-            ))}
+        <Nav />
+        <div className="listWrap">
+          <div className="listContanier">
+            <ListCategoryBar />
+            <div className="listProductCard">
+              {this.state.beverageData.map(product => (
+                <ListBeverageCard
+                  key={product.id}
+                  img={product.img}
+                  name={product.name}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

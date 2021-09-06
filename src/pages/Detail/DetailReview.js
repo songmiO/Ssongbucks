@@ -11,24 +11,19 @@ class DetailReview extends Component {
   }
 
   reviewInput = event => {
-    this.setState({ reviewList: event.target.value });
+    this.setState({ reviewContents: event.target.value });
   };
 
   addReview = () => {
-    const addContent = this.state.reviewList;
-    addContent.push(this.state.reviewContents);
+    const addReviewText = this.state.reviewContents;
 
     this.setState({
-      review: this.state.reviewList,
-      reviewContents: '',
+      reviewList: [...this.state.reviewList, addReviewText],
+      review: '',
     });
   };
 
   clickEvent = () => {
-    this.addReview();
-  };
-
-  enterEvent = () => {
     this.addReview();
   };
 
@@ -39,7 +34,7 @@ class DetailReview extends Component {
         <div className="reviewList">
           <ul className="list">
             {this.state.reviewList.map(content => (
-              <li>{content}쿨라임 피지오 너무 맛있어요!</li>
+              <li>{content}</li>
             ))}
           </ul>
         </div>
@@ -47,12 +42,13 @@ class DetailReview extends Component {
           <input
             className="reviewInput"
             type="text"
-            name="review"
             placeholder="리뷰를 입력해주세요"
             onChange={this.reviewInput}
-            onKeyPress={this.enterEvent}
             value={this.state.reviewContents}
           />
+          <button className="reviewClickBtn" onClick={this.clickEvent}>
+            전송
+          </button>
         </div>
       </div>
     );

@@ -1,0 +1,19 @@
+{
+  "reviewListData": [
+    {
+      "id": 1,
+      "userId": "jmt_sb",
+      "review": "쿨라임 피지오 정말 맛있어요"
+    },
+    {
+      "id": 2,
+      "userId": "muckbag",
+      "review": "매일 이 음료만 찾아요!"
+    },
+    {
+      "id": 3,
+      "userId": "sunrise",
+      "review": "아침에 활기를 일깨워 주는 음료"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Nav from '../../components/Nav/Nav';
 import LoginTitle from './LoginTitle';
 import LoginForm from './LoginForm';
 import LoginForgotPw from './LoginForgotPw';
@@ -8,10 +9,13 @@ class Login extends Component {
   render() {
     return (
       <div className="login">
-        <div className="loginContainer">
-          <LoginTitle />
-          <LoginForm />
-          <LoginForgotPw />
+        <Nav />
+        <div className="loginWrap">
+          <div className="loginContainer">
+            <LoginTitle />
+            <LoginForm />
+            <LoginForgotPw />
+          </div>
         </div>
       </div>
     );
