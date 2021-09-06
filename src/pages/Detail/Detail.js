@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DetailProductName from './DetailProductName';
 import DetailProductImage from './DetailProductImage';
 import DetailProductInfo from './DetailProductInfo';
+import DetailReview from './DetailReview';
 import './Detail.scss';
 
 class Detail extends Component {
@@ -13,6 +14,7 @@ class Detail extends Component {
           <DetailProductImage />
           <div className="productContents">
             <DetailProductInfo />
+            <DetailReview />
           </div>
         </div>
       </div>
