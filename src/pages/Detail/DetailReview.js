@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Review from './Review';
 import './DetailReview.scss';
 
 class DetailReview extends Component {
@@ -25,13 +24,21 @@ class DetailReview extends Component {
   }
 
   reviewInput = event => {
-    this.setState({ reviewContents: event.target.value });
+    this.setState({ reviewContents: event.currentTarget.value });
   };
 
   addReview = () => {
-    this.setState({
-      reviewList: [...this.state.reviewList, this.state.reviewContents],
-    });
+    this.setState(reveiw => ({
+      ...reveiw,
+      reviewContents: '',
+      reviewList: [
+        ...reveiw.reviewList,
+        {
+          id: reveiw.reviewList[reveiw.reviewList.length - 1].id + 1,
+          content: reveiw.reviewContents,
+        },
+      ],
+    }));
   };
 
   clickEvent = () => {
@@ -39,16 +46,17 @@ class DetailReview extends Component {
   };
 
   render() {
+    const { reviewList } = this.state;
     return (
       <div className="detailReview">
         <h1>리뷰</h1>
         <div className="reviewList">
           <ul className="list">
-            {this.state.reviewList.map(review => {
-              const { id, content } = review;
-              return <Review key={id} content={content} />;
-            })}
-            <dd>{this.props.content}</dd>
+            {reviewList.map((content, id) => (
+              <li key={id} content={content}>
+                {content.content}
+              </li>
+            ))}
           </ul>
         </div>
         <div className="reviewWrite">
