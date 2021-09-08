@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
+import Review from './Review';
 import './DetailReview.scss';
 
 class DetailReview extends Component {
   constructor() {
     super();
     this.state = {
-      reviewList: [],
+      reviewList: [
+        {
+          id: 1,
+          content: '쿨라임 너무 맛있어요!',
+        },
+        {
+          id: 2,
+          content: '여름에 이 만한 음료가 없죠!',
+        },
+        {
+          id: 3,
+          content: '전, 이 음료만 찾아요',
+        },
+      ],
       reviewContents: '',
     };
   }
@@ -15,11 +29,8 @@ class DetailReview extends Component {
   };
 
   addReview = () => {
-    const addReviewText = this.state.reviewContents;
-
     this.setState({
-      reviewList: [...this.state.reviewList, addReviewText],
-      review: '',
+      reviewList: [...this.state.reviewList, this.state.reviewContents],
     });
   };
 
@@ -33,9 +44,11 @@ class DetailReview extends Component {
         <h1>리뷰</h1>
         <div className="reviewList">
           <ul className="list">
-            {this.state.reviewList.map(content => (
-              <li>{content}</li>
-            ))}
+            {this.state.reviewList.map(review => {
+              const { id, content } = review;
+              return <Review key={id} content={content} />;
+            })}
+            <dd>{this.props.content}</dd>
           </ul>
         </div>
         <div className="reviewWrite">
