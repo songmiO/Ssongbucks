@@ -12,11 +12,11 @@ class DetailReview extends Component {
         },
         {
           id: 2,
-          content: '여름에 이 만한 음료가 없죠!',
+          content: '전, 이 음료만 찾아요',
         },
         {
           id: 3,
-          content: '전, 이 음료만 찾아요',
+          content: '여름에 이 만한 음료가 없죠!',
         },
       ],
       reviewContents: '',
@@ -29,7 +29,6 @@ class DetailReview extends Component {
 
   addReview = () => {
     this.setState(state => ({
-      ...state,
       reviewList: [
         ...state.reviewList,
         {
@@ -37,11 +36,8 @@ class DetailReview extends Component {
           content: state.reviewContents,
         },
       ],
+      reviewContents: '',
     }));
-  };
-
-  clickEvent = () => {
-    this.addReview();
   };
 
   render() {
@@ -66,7 +62,7 @@ class DetailReview extends Component {
             onChange={this.getTextValue}
             value={this.state.reviewContents}
           />
-          <button className="reviewClickBtn" onClick={this.clickEvent}>
+          <button className="reviewClickBtn" onClick={this.addReview}>
             전송
           </button>
         </div>
