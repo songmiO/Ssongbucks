@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import LikeBtn from '../Detail/LikeBtn';
+
 import './ListBeverageCard.scss';
 
 class ListBeverageCard extends Component {
   render() {
     return (
       <div className="listBeverageCard">
-        <section className="beverageProductImage">
-          <LikeBtn />
+        <div className="beverageProductImage">
+          <div className="productLikeBtn">
+          <
+          </div>
           <img
             className="beverageProduct"
             src={this.props.img}
