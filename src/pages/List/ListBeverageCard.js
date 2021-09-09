@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LikeBtn from '../Detail/LikeBtn';
 import './ListBeverageCard.scss';
 
 class ListBeverageCard extends Component {
@@ -6,6 +7,7 @@ class ListBeverageCard extends Component {
     return (
       <div className="listBeverageCard">
         <section className="beverageProductImage">
+          <LikeBtn />
           <img
             className="beverageProduct"
             src={this.props.img}

@@ -1,0 +1,32 @@
+.detailReview {
+  h1 {
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+    color: #444444;
+    font-size: 20px;
+    font-weight: bolder;
+    line-height: 1.5;
+  }
+
+  .list {
+    li {
+      margin-top: 8px;
+      font-size: 15px;
+    }
+  }
+  .reviewInput {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #dddddd;
+  }
+
+  .reviewClickBtn {
+    margin-left: 20px;
+    border: 0;
+    background-color: transparent;
+    color: #0095f6;
+    font-size: 14px;
+  }
+}
