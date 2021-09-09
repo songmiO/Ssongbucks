@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import LikeBtn from '../Detail/LikeBtn';
 import './ListBeverageCard.scss';
 
 class ListBeverageCard extends Component {
@@ -8,7 +8,7 @@ class ListBeverageCard extends Component {
       <div className="listBeverageCard">
         <div className="beverageProductImage">
           <div className="productLikeBtn">
-          <
+            <LikeBtn />
           </div>
           <img
             className="beverageProduct"
@@ -16,7 +16,7 @@ class ListBeverageCard extends Component {
             alt="beverageImage"
           />
           <p className="beverageProductName">{this.props.name}</p>
-        </section>
+        </div>
       </div>
     );
   }
