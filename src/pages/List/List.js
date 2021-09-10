@@ -33,6 +33,7 @@ class List extends Component {
               {this.state.beverageData.map(product => (
                 <ListBeverageCard
                   key={product.id}
+                  id={product.id}
                   img={product.img}
                   name={product.name}
                 />

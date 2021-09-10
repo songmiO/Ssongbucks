@@ -21,7 +21,7 @@ class LoginForm extends Component {
   };
 
   goMain = () => {
-    this.props.history.push('/main');
+    this.props.history.push('/list');
   };
 
   render() {
