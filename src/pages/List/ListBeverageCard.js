@@ -4,7 +4,7 @@ import LikeBtn from '../Detail/LikeBtn';
 import './ListBeverageCard.scss';
 
 class ListBeverageCard extends Component {
-  showDetail = () => {
+  goDetail = () => {
     this.props.history.push(`/detail/${this.props.id}`);
   };
 
@@ -15,7 +15,7 @@ class ListBeverageCard extends Component {
           <div className="productLikeBtn">
             <LikeBtn />
           </div>
-          <div className="beverageProductCard" onClick={this.showDetail}>
+          <div className="beverageProductCard" onClick={this.goDetail}>
             <img
               className="beverageProduct"
               src={this.props.img}

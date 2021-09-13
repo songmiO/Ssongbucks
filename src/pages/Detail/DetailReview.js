@@ -62,12 +62,12 @@ class DetailReview extends Component {
         <h1>리뷰</h1>
         <div className="reviewList">
           <ul className="list">
-            {reviewList.map((review, id) => (
-              <li key={id} review={review}>
-                {review.content}
+            {reviewList.map(id => (
+              <li key={id}>
+                {id.content}
                 <button
                   className="deleteReviewBtn"
-                  onClick={() => this.deleteReview(review)}
+                  onClick={() => this.deleteReview(id)}
                 >
                   삭제
                 </button>

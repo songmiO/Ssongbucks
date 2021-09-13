@@ -20,7 +20,7 @@ class LoginForm extends Component {
     });
   };
 
-  goMain = () => {
+  goList = () => {
     this.props.history.push('/list');
   };
 
@@ -49,7 +49,7 @@ class LoginForm extends Component {
               isLoginBtnActive ? 'loginBtn loginBtnActive' : 'loginBtn'
             }
             type="button"
-            onClick={this.goMain}
+            onClick={this.goList}
           >
             로그인
           </button>
