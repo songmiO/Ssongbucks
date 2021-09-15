@@ -18,6 +18,14 @@ class DetailReview extends Component {
           id: 3,
           content: '여름에 이 만한 음료가 없죠!',
         },
+        {
+          id: 4,
+          content: 'GH님이 사주신 쿨라임 아직 잊지못해요 ㅠㅠ',
+        },
+        {
+          id: 5,
+          content: '쿨~라임이 왜 쿨~라임이겠어요 COOL ~ 하자나요!!!',
+        },
       ],
       reviewContents: '',
     };
@@ -40,6 +48,13 @@ class DetailReview extends Component {
     }));
   };
 
+  deleteReview = comment => {
+    const review = this.state.reviewList.filter(
+      content => content.id !== comment.id
+    );
+    this.setState({ reviewList: review });
+  };
+
   render() {
     const { reviewList } = this.state;
     return (
@@ -47,9 +62,15 @@ class DetailReview extends Component {
         <h1>리뷰</h1>
         <div className="reviewList">
           <ul className="list">
-            {reviewList.map((review, id) => (
-              <li key={id} review={review}>
-                {review.content}
+            {reviewList.map(id => (
+              <li key={id}>
+                {id.content}
+                <button
+                  className="deleteReviewBtn"
+                  onClick={() => this.deleteReview(id)}
+                >
+                  삭제
+                </button>
               </li>
             ))}
           </ul>
@@ -62,6 +83,7 @@ class DetailReview extends Component {
             onChange={this.getTextValue}
             value={this.state.reviewContents}
           />
+
           <button className="reviewClickBtn" onClick={this.addReview}>
             전송
           </button>
@@ -70,5 +92,4 @@ class DetailReview extends Component {
     );
   }
 }
-
 export default DetailReview;
