@@ -1,4 +1,5 @@
-# starbucks motive coding project (ssongbucks)
+# starbucks motive coding project 
+## ssongbucks
 
 ## 👩🏻‍💻 Front-end 
 
