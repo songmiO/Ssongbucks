@@ -20,10 +20,6 @@ class DetailReview extends Component {
         },
         {
           id: 4,
-          content: 'GH님이 사주신 쿨라임 아직 잊지못해요 ㅠㅠ',
-        },
-        {
-          id: 5,
           content: '쿨~라임이 왜 쿨~라임이겠어요 COOL ~ 하자나요!!!',
         },
       ],

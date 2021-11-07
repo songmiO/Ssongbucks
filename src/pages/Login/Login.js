@@ -3,6 +3,7 @@ import Nav from '../../components/Nav/Nav';
 import LoginTitle from './LoginTitle';
 import LoginForm from './LoginForm';
 import LoginForgotPw from './LoginForgotPw';
+import Footer from '../../components/Footer/Footer';
 import './Login.scss';
 
 class Login extends Component {
@@ -17,6 +18,7 @@ class Login extends Component {
             <LoginForgotPw />
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

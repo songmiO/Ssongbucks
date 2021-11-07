@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from '../../components/Nav/Nav';
 import ListCategoryBar from './ListCategoryBar';
 import ListBeverageCard from './ListBeverageCard';
+import Footer from '../../components/Footer/Footer';
 import './List.scss';
 
 class List extends Component {
@@ -36,6 +37,7 @@ class List extends Component {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

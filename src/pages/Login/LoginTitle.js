@@ -5,7 +5,7 @@ class LoginTitle extends Component {
   render() {
     return (
       <div className="loginTitle">
-        <div className="title">webucks</div>
+        <div className="title">ssongbucks</div>
       </div>
     );
   }

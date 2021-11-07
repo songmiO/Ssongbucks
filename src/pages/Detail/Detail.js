@@ -4,6 +4,7 @@ import DetailProductName from './DetailProductName';
 import DetailProductImage from './DetailProductImage';
 import DetailProductInfo from './DetailProductInfo';
 import DetailReview from './DetailReview';
+import Footer from '../../components/Footer/Footer';
 import './Detail.scss';
 
 class Detail extends Component {
@@ -19,6 +20,7 @@ class Detail extends Component {
             <DetailReview />
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
