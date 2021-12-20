@@ -9,7 +9,6 @@ import './Detail.scss';
 
 class Detail extends Component {
   render() {
-    console.log('출력');
     return (
       <div className="detail">
         <Nav />

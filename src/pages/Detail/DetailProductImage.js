@@ -3,6 +3,7 @@ import './DetailProductImage.scss';
 
 class DetailProductImage extends Component {
   render() {
+    console.log('확인');
     return (
       <div className="detailProductImage">
         <img
