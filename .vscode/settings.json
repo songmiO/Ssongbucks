@@ -12,5 +12,6 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "prettier.singleQuote": true,
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "liveServer.settings.port": 5501
 }

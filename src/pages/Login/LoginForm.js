@@ -30,18 +30,22 @@ class LoginForm extends Component {
     return (
       <div className="loginForm">
         <form className="loginInput">
+          <label for="userId">아이디</label>
           <input
             className="loginId"
             type="text"
             name="id"
             placeholder="아이디 또는 이메일을 입력해주세요."
+            id="userId"
             onChange={this.handleInput}
           />
+          <label for="userPw">비밀번호</label>
           <input
             className="loginPw"
             type="password"
             name="pw"
             placeholder="비밀번호를 입력해주세요."
+            id="userPw"
             onChange={this.handleInput}
           />
           <button
