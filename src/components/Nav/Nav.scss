@@ -28,4 +28,9 @@
       cursor: pointer;
     }
   }
+
+  .navListItem {
+    height: 0;
+    overflow: hidden;
+  }
 }

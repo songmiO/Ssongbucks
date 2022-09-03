@@ -6,14 +6,22 @@ class Nav extends Component {
     return (
       <div className="nav">
         <img className="logo" src="../images/ssongBuckslogo.png" alt="logo" />
-        <nav className="navWrap">
+        <nav className="navContainer">
+          <div class="navList">
+            <a href="/">COFFEE</a>
+          </div>
           <ul className="navMenu">
-            <li className="navList">
-              <a href="/">COFFEE</a>
-              <a href="/">MENU</a>
-              <a href="/">STORE</a>
-              <a href="/">MY SSONGBUCKS</a>
-              <a href="/">WHAT'S NEW</a>
+            <li className="navListItem">
+              <h2>커피</h2>
+            </li>
+            <li className="navListItem">
+              <a href="/">쏭벅스 원두</a>
+            </li>
+            <li className="navListItem">
+              <a href="/">쏭벅스 비아</a>
+            </li>
+            <li className="navListItem">
+              <a href="/">쏭벅스 엣홈 at 캡슐</a>
             </li>
           </ul>
         </nav>
