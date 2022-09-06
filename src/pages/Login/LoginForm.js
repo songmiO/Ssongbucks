@@ -30,7 +30,6 @@ class LoginForm extends Component {
     return (
       <div className="loginForm">
         <form className="loginInput">
-          <label for="userId">아이디</label>
           <input
             className="loginId"
             type="text"
@@ -39,7 +38,6 @@ class LoginForm extends Component {
             id="userId"
             onChange={this.handleInput}
           />
-          <label for="userPw">비밀번호</label>
           <input
             className="loginPw"
             type="password"
