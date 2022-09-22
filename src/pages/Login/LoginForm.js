@@ -4,7 +4,6 @@ import './LoginForm.scss';
 
 class LoginForm extends Component {
   constructor() {
-    console.log('확인');
     super();
     this.state = {
       id: '',
