@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import './LoginForm.scss';
 
 class LoginForm extends Component {
+  console.log('확인')
   constructor() {
     super();
     this.state = {
